@@ -11,16 +11,17 @@ namespace MVCBootcamp_Web.Controllers
     {
         private CustomerRepository custRepo = new CustomerRepository();
 
-        // GET: CustomeRoute
+        // GET: CustomersAjax
+        [Route("CustomerData/AllCustomer")]
         public ActionResult Index()
         {
             return View(custRepo.GetAllData().Take(5));
         }
 
+        [Route("CustomerData/{id}")]
         public ActionResult Search(string id)
         {
-            var cust = custRepo.Search(id);
-            return View(cust);
+            return View(custRepo.Search(id));
         }
     }
 }
