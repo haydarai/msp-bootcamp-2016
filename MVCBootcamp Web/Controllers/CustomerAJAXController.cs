@@ -22,7 +22,15 @@ namespace MVCBootcamp_Web.Controllers
         public ActionResult Search(string name)
         {
             var cust = custRepo.GetAllData().Where(c => c.CompanyName.Contains(name));
-            return View(cust);
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_SearchPartial", cust);
+            }
+            else
+            {
+                return View(cust);
+            }
         }
     }
 }
