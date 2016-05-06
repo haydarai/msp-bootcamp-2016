@@ -1,0 +1,11 @@
+﻿@using MVCBootcamp_Web.Models
+
+@model IEnumerable<CustomerData>
+
+<h2>Company List from Demo Partial</h2>
+<ul>
+    @foreach (var cust in Model)
+    {
+        <li>@cust.CompanyName, @cust.City</li>
+    }
+</ul>
