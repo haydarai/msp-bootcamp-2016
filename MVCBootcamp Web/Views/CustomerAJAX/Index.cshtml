@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<DAL.Customer>
 
-@{ 
+@{
     ViewBag.Title = "Customers AJAX";
 }
 
@@ -23,3 +23,27 @@
     }
 
 </div>
+
+<div id="divresult">No Result</div>
+
+<div>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                @Ajax.ActionLink(item.CustomerID, "Search", new { name = item.CompanyName }, new AjaxOptions()
+                   {
+                       InsertionMode = InsertionMode.Replace,
+                       HttpMethod = "Get",
+                       UpdateTargetId = "divdetails"
+                   }))
+            </li>
+        }
+    </ul>
+</div>
+
+<div id="divdetails">No Details</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryajax")
+}
