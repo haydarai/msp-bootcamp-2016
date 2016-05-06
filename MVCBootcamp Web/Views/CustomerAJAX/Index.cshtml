@@ -1,0 +1,25 @@
+﻿@model IEnumerable<DAL.Customer>
+
+@{ 
+    ViewBag.Title = "Customers AJAX";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+
+    @using (Ajax.BeginForm("Search", "CustomerAJAX", new AjaxOptions()
+        {
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "Get",
+            UpdateTargetId = "divresult"
+        }))
+
+    {
+        <div class="form-group form-control">
+            <input type="text" name="name" />
+            <input type="submit" value="Search by AJAX" />
+        </div>
+    }
+
+</div>
