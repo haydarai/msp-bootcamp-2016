@@ -18,5 +18,11 @@ namespace MVCBootcamp_Web.Controllers
         {
             return View(custRepo.GetAllData().Take(10));
         }
+
+        public ActionResult Search(string name)
+        {
+            var cust = custRepo.GetAllData().Where(c => c.CompanyName.Contains(name));
+            return View(cust);
+        }
     }
 }
