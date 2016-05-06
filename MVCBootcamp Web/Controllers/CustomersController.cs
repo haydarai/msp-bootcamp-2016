@@ -57,6 +57,7 @@ namespace MVCBootcamp_Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CustomerID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax")] Customer customer)
         {
+
             try
             {
                 if (ModelState.IsValid)
