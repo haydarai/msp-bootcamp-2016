@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace DAL
 {
-	[MetadataType(typeof(CustomerMetadata))]
+	//[MetadataType(typeof(CustomerMetadata))]
     public partial class Customer
     {
     }

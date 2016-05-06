@@ -114,12 +114,14 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
+<div>@ViewBag.ErrMsg</div>
+
 @section scripts{
     <script type="text/javascript">
 
     </script>
 
-    @Scripts.Render("~/bundles/jqueryval")
+    @*@Scripts.Render("~/bundles/jqueryval")*@
 }
 
 <style type="text/css">
