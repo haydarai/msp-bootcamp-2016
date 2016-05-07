@@ -71,3 +71,5 @@ D:\Documents\Workspaces\Visual Studio\MVCBootcamp Web\MVCBootcamp Web\bin\DAL.dl
 D:\Documents\Workspaces\Visual Studio\MVCBootcamp Web\MVCBootcamp Web\bin\NorthwindRepository.dll
 D:\Documents\Workspaces\Visual Studio\MVCBootcamp Web\MVCBootcamp Web\bin\DAL.pdb
 D:\Documents\Workspaces\Visual Studio\MVCBootcamp Web\MVCBootcamp Web\bin\NorthwindRepository.pdb
+D:\Documents\Workspaces\Visual Studio\MVCBootcamp Web\MVCBootcamp Web\obj\Debug\MVCBootcamp_Web.Migrations.InitialCreate.resources
+D:\Documents\Workspaces\Visual Studio\MVCBootcamp Web\MVCBootcamp Web\obj\Debug\MVCBootcamp Web.csproj.GenerateResource.Cache

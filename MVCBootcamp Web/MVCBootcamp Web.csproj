@@ -177,6 +177,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605070318332_InitialCreate.cs" />
+    <Compile Include="Migrations\201605070318332_InitialCreate.Designer.cs">
+      <DependentUpon>201605070318332_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomerData.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -278,6 +283,11 @@
       <Project>{96b09844-afff-4ec6-b337-0dcf6658a059}</Project>
       <Name>NorthwindRepository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201605070318332_InitialCreate.resx">
+      <DependentUpon>201605070318332_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
