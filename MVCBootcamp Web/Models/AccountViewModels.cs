@@ -49,9 +49,14 @@ namespace MVCBootcamp_Web.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Username")]
         [EmailAddress]
-        public string Email { get; set; }
+        public string Username { get; set; }
+
+        //[Required]
+        //[Display(Name = "Email")]
+        //[EmailAddress]
+        //public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -64,6 +69,11 @@ namespace MVCBootcamp_Web.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name = "Username")]
+        [EmailAddress]
+        public string Username { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
