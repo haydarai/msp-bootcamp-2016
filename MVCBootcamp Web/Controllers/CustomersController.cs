@@ -12,6 +12,7 @@ using NorthwindRepository.Repositories;
 
 namespace MVCBootcamp_Web.Controllers
 {
+    [Authorize]
     public class CustomersController : Controller
     {
         //private NORTHWNDEntities db = new NORTHWNDEntities();
@@ -24,12 +25,14 @@ namespace MVCBootcamp_Web.Controllers
         }
 
         // GET: Customers
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(custRepo.GetAllData());
         }
 
         // GET: Customers/Details/5
+        [AllowAnonymous]
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -106,6 +109,7 @@ namespace MVCBootcamp_Web.Controllers
         }
 
         // GET: Customers/Delete/5
+        [Authorize(Roles = "Administrators")]
         public ActionResult Delete(string id)
         {
             if (id == null)
